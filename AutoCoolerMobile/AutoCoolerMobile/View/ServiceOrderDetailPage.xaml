@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutoCoolerMobile.View.ServiceOrderDetailPage"
+             Title="Service Order Detail"
+             Shell.PresentationMode="ModalAnimated"
+             BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Frame CornerRadius="20"
+                   Padding="25"
+                   BackgroundColor="White"
+                   HasShadow="True"
+                   BorderColor="#E5E7EB">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Order Type and Status -->
+                    <Label Text="{Binding Order.Type}"
+                           FontAttributes="Bold"
+                           FontSize="22"
+                           TextColor="#1F2937"
+                           HorizontalOptions="Center"/>
+                    
+                    <!-- StatusName -->
+                    <Frame BackgroundColor="#198754"
+                            CornerRadius="12"
+                            Padding="10,5"
+                            HasShadow="False">
+                        <Label Text="{Binding Order.StatusName}"
+                               FontSize="16" 
+                               TextColor="White" 
+                               FontAttributes="Bold" 
+                               HorizontalOptions="Center"/>
+                    </Frame> 
+                    
+                    <!-- Order Date -->
+                    <Label Text="{Binding Order.OrderDate, StringFormat='Date: {0:dd/MM/yyyy}'}"
+                           FontSize="14"
+                           TextColor="#6B7280"/>
+
+                    <!-- Customer Info -->
+                    <Label Text="Customer"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#1F2937"
+                           Margin="0,15,0,0"/>
+                    <Label Text="{Binding Order.Name}" FontSize="16" TextColor="#374151"/>
+                    <Label Text="{Binding Order.Adress}" FontSize="16" TextColor="#374151"/>
+                    <Label Text="{Binding Order.Phone}" FontSize="16" TextColor="#374151"/>
+
+                    <!-- Vehicle Info -->
+                    <Label Text="Vehicle"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#1F2937"
+                           Margin="0,15,0,0"/>
+                    <Label Text="{Binding Order.Plate}" FontSize="16" TextColor="#374151"/>
+                    <Label Text="{Binding Order.Make}" FontSize="16" TextColor="#374151"/>
+                    <Label Text="{Binding Order.Model}" FontSize="16" TextColor="#374151"/>
+                    
+                    <!-- Observations -->
+                    <Label Text="Observations"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#1F2937"
+                           Margin="0,15,0,0"/>
+                    <Label Text="{Binding Order.Observations}" FontSize="16" TextColor="#374151"/>
+                    
+                    <!-- Activities -->
+                    <Label Text="Activities"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="#1F2937"
+                           Margin="0,15,0,0"/>
+                    <Editor Text="{Binding Order.Activities}" FontSize="16" TextColor="#374151" 
+                            HeightRequest="100" Placeholder="Enter activities"/>
+
+                    <Button Text="Back"
+                            BackgroundColor="#2563EB"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="45"
+                            FontAttributes="Bold"
+                            Clicked="OnBackButtonClicked"
+                            Margin="0,20,0,0"/>
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AutoCoolerMobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AutoCoolerMobile.View"
+    Shell.FlyoutBehavior="Disabled"
+    Title="AutoCooler Mobile">
+    
+    <ShellContent
+                Title=""
+                ContentTemplate="{DataTemplate local:LoginPage}"
+                Route="LoginPage" />
+
+    <ShellContent Title="Company" 
+                  ContentTemplate="{DataTemplate local:CompanyPage}" 
+                  Route="CompanyPage" />
+    
+    <TabBar>        
+        <Tab Title="Home" Icon="dotnet_bot.png">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="My Data" Icon="dotnet_bot.png">
+            <ShellContent
+                Title="My Data"
+                ContentTemplate="{DataTemplate local:MyData}"
+                Route="MyData" />
+        </Tab>
+    </TabBar>
+    
+    <ShellContent
+        Title="Service Order Detail"        
+        ContentTemplate="{DataTemplate local:ServiceOrderDetailPage}" 
+        Route="ServiceOrderDetailPage" />
+</Shell>

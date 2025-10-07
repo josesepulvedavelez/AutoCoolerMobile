@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutoCoolerMobile.View.CompanyPage"
+             Title="AutoCooler"
+             BackgroundColor="#F5F7FA">
+
+    <ScrollView>
+        <Grid Padding="30,60,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Spacing="20" Margin="0,0,0,40">
+                <Frame CornerRadius="150"
+                       WidthRequest="250"
+                       HeightRequest="250"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       BackgroundColor="White"  
+                       HasShadow="True"
+                       BorderColor="White"
+                       Padding="10">
+                    <Image Source="logo.png" />
+                </Frame>                
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Spacing="20">                
+                <StackLayout Spacing="8">
+                    <Label Text="Company Name"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#374151"/>
+                    
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="0"
+                           HasShadow="False"
+                           BorderColor="#E5E7EB">
+                        
+                        <Entry x:Name="NameEntry"
+                               Placeholder="Enter company name"
+                               PlaceholderColor="#9CA3AF"
+                               TextColor="#1F2937"
+                               FontSize="16"
+                               Margin="15,12"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Spacing="8">
+                    <Label Text="Address"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#374151"/>
+
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="0"
+                           HasShadow="False"
+                           BorderColor="#E5E7EB">
+                        
+                        <Entry x:Name="AddressEntry"
+                               Placeholder="Enter Address"
+                               PlaceholderColor="#9CA3AF"
+                               TextColor="#1F2937"
+                               FontSize="16"
+                               Margin="15,12"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Spacing="8">
+                    <Label Text="Phone"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#374151"/>
+
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="0"
+                           HasShadow="False"
+                           BorderColor="#E5E7EB">
+                        
+                        <Entry x:Name="PhoneEntry"
+                               Placeholder="Enter Phone"
+                               PlaceholderColor="#9CA3AF"
+                               TextColor="#1F2937"
+                               FontSize="16"
+                               Margin="15,12"
+                               Keyboard="Telephone"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Spacing="8">
+                    <Label Text="Email"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#374151"/>
+
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="0"
+                           HasShadow="False"
+                           BorderColor="#E5E7EB">
+                        
+                        <Entry x:Name="EmailEntry"
+                               Placeholder="Enter Email"
+                               PlaceholderColor="#9CA3AF"
+                               TextColor="#1F2937"
+                               FontSize="16"
+                               Margin="15,12"
+                               Keyboard="Email" />
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Spacing="8">
+                    <Label Text="User name"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#374151"/>
+
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="0"
+                           HasShadow="False"
+                           BorderColor="#E5E7EB">
+                        <Entry x:Name="userNameEntry"
+                               Placeholder="Enter your username"
+                               PlaceholderColor="#9CA3AF"
+                               TextColor="#1F2937"
+                               FontSize="16"
+                               Margin="15,12"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Spacing="8">
+                    <Label Text="Password"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#374151"/>
+
+                    <Frame BackgroundColor="White"
+                           CornerRadius="12"
+                           Padding="0"
+                           HasShadow="False"
+                           BorderColor="#E5E7EB">
+                        <Entry x:Name="passwordEntry"
+                               Placeholder="Enter you password"
+                               PlaceholderColor="#9CA3AF"
+                               TextColor="#1F2937"
+                               FontSize="16"
+                               IsPassword="True"
+                               Margin="15,12"/>
+                    </Frame>
+                </StackLayout>
+
+                <Button Text="Submit"
+                        BackgroundColor="#3B82F6"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="12"
+                        HeightRequest="50"
+                        Margin="0,20,0,0"
+                        />
+            </StackLayout>
+        </Grid>
+        
+    </ScrollView>
+</ContentPage>
